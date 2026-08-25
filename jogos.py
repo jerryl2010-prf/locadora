@@ -11,13 +11,16 @@ def cadastrar_jogo(jogos):
     sleep(0.5)
     valor = float(input("Digite o valor de locação diária do jogo: R$"))
     sleep(0.5)
-    jogo = {"titulo": nome, "plataforma": plataforma, "genero": genero, "valor": valor}
+    jogo = {"nome": nome, "plataforma": plataforma, "genero": genero, "valor": valor}
     jogos.append(jogo)
     print("Jogo cadastrado com sucesso!")
     sleep(1)
 
 def listar_jogos(jogos):
     contador = 0
+    if len(jogos) == 0:
+        print("Não há jogos cadastrados!")
+        return
     sleep(0.5)
     print("--- Catálogo de jogos ---")
     for jogo in jogos:

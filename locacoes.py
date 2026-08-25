@@ -46,6 +46,9 @@ def realizar_locacao(locacoes, jogos):
 def listar_locacoes(locacoes):
     contador = 0
     sleep(0.5)
+    if len(locacoes) == 0:
+        print("Não há locações cadastradas!")
+        return
     print("--- Catálogo de locações ---")
     for locacao in locacoes:
         contador+=1
