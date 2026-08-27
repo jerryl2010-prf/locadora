@@ -1,7 +1,17 @@
 [
     {
-        "jogo": "Minecraft",
-        "dias_alocados": 7,
-        "valor": 66.5
+        "jogo": "God of War III",
+        "dias_alocados": 9,
+        "valor": 40.5
+    },
+    {
+        "jogo": "Red Dead Redemption II",
+        "dias_alocados": 3,
+        "valor": 30.0
+    },
+    {
+        "jogo": "Red Dead Redemption II",
+        "dias_alocados": 8,
+        "valor": 72.0
     }
 ]

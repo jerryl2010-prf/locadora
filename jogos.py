@@ -10,7 +10,12 @@ def cadastrar_jogo(jogos):
     sleep(0.5)
     valor = float(input("Digite o valor de locação diária do jogo: R$"))
     sleep(0.5)
-    jogo = {"nome": nome, "plataforma": plataforma, "genero": genero, "valor": valor}
+    copias = int(input("Digite o número de cópias totais desse jogo: "))
+    sleep(0.5)
+    if copias < 0:
+        print("Número de cópias inválido!")
+        return
+    jogo = {"nome": nome, "plataforma": plataforma, "genero": genero, "valor": valor, "copias": copias}
     jogos.append(jogo)
     print("Jogo cadastrado com sucesso!")
     sleep(1)
@@ -27,5 +32,5 @@ def listar_jogos(jogos):
         sleep(0.5)
         print(f"\nJogo {contador}:")
         sleep(0.5)
-        print(f"Título: {jogo["nome"]}   |   Plataforma: {jogo["plataforma"]}   |   Gênero: {jogo["genero"]}   |   Valor diário: R${jogo["valor"]}\n\n")
+        print(f"Título: {jogo["nome"]}   |   Plataforma: {jogo["plataforma"]}   |   Gênero: {jogo["genero"]}   |   Valor diário: R${jogo["valor"]}   |   Cópias: {jogo["copias"]}\n")
         sleep(3)

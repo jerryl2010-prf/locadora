@@ -1,14 +1,16 @@
 [
     {
-        "nome": "Minecraft",
-        "plataforma": "PC",
-        "genero": "Sandbox",
-        "valor": 10.0
+        "nome": "God of War III",
+        "plataforma": "PlayStation 3",
+        "genero": "Hack'n Slash",
+        "valor": 5.0,
+        "copias": 6
     },
     {
-        "nome": "COD MW2",
-        "plataforma": "PC",
-        "genero": "FPS",
-        "valor": 5.0
+        "nome": "Red Dead Redemption II",
+        "plataforma": "PlayStation 4",
+        "genero": "Faroeste",
+        "valor": 10.0,
+        "copias": 3
     }
 ]

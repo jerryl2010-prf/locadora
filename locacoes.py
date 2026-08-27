@@ -1,5 +1,6 @@
 from time import sleep
 from jogos import listar_jogos
+from persistencia import gravacao_jogos
 
 def realizar_locacao(locacoes, jogos):
     sleep(0.5)
@@ -14,9 +15,9 @@ def realizar_locacao(locacoes, jogos):
     nome = input("Digite o nome do jogo que deseja alugar: ")
     sleep(0.5)
     for jogo in jogos:
-        if jogo["nome"] == nome:
+        if jogo["nome"] == nome and jogo["copias"] > 0:
             sleep(0.5)
-            print(f"Jogo encontrado! Valor da diária: R${jogo["valor"]}")
+            print(f"Jogo encontrado e disponível! Valor da diária: R${jogo["valor"]}")
             sleep(0.5)
             dias = int(input("Quantos dias deseja alugar o jogo: "))
             sleep(0.5)
@@ -37,6 +38,8 @@ def realizar_locacao(locacoes, jogos):
             locacoes.append(locacao)
             sleep(0.5)
             print("Locação feita com sucesso!")
+            jogo["copias"] = jogo["copias"] - 1
+            gravacao_jogos(jogos)
             return
     print(f"Jogo não encontrado!")
     sleep(0.7)

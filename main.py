@@ -39,11 +39,15 @@ while True:
             senha = input("Digite sua senha: ")
             telefone = input("Digite seu telefone: ")
             clientes = ler_clientes()
+            achou = False
             for c in clientes:
                 if c["nome"] == nome and c["senha"] == senha and c["numero"] == telefone:
+                    achou = True
+                    sleep(0.5)
+                    print(f"Bem vindo, {nome}!")
                     while True:
                         sleep(0.7)
-                        print("--- Menu Cliente ---")
+                        print("\n--- Menu Cliente ---\n")
                         sleep(0.7)
                         print("1) Realizar locação\n2) Listar jogos\n3) Sair")
                         sleep(0.7)
@@ -62,8 +66,12 @@ while True:
                         else:
                             print("Opção inválida!")
                             sleep(0.7)
-            print("Cliente não encontrado! Verifique seus dados")
             sleep(0.7)
+            if achou:
+                pass
+            else:
+                print("Cliente não encontrado! Verifique seus dados")
+                sleep(0.7)
 
     elif opcao == 2:
         login = input("Digite o usuário: ")
@@ -71,9 +79,10 @@ while True:
         senha = input("Digite a senha: ")
         sleep(0.7)
         if senha == senha_ger and login == usuario_ger:
+            print("Bem vindo, gerente!")
             while True:
                 sleep(0.7)
-                print("--- Menu Gerente ---")
+                print("\n--- Menu Gerente ---\n")
                 sleep(0.7)
                 print("1) Listar clientes\n2) Listar jogos\n3) Listar locações\n4) Cadastrar jogo\n5) Sair")
                 sleep(0.7)
@@ -96,6 +105,10 @@ while True:
                 else:
                     print("Opção inválida!")
                     sleep(0.5)
+        else:
+            sleep(0.5)
+            print("Senha e/ou usuário errado(s)!")
+            sleep(0.5)
 
     elif opcao == 3:
         print("Saindo...")
