@@ -1,7 +1,5 @@
 from time import sleep
 from jogos import listar_jogos
-locacoes = []
-jogos = []
 
 def realizar_locacao(locacoes, jogos):
     sleep(0.5)

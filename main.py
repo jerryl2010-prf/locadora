@@ -1,6 +1,7 @@
 from clientes import cadastrar_cliente, listar_clientes
 from jogos import cadastrar_jogo, listar_jogos
 from locacoes import realizar_locacao, listar_locacoes
+from persistencia import gravacao_clientes, ler_clientes, gravacao_jogos, ler_jogos, gravacao_locacoes, ler_locacoes
 from time import sleep
 import json
 
@@ -24,15 +25,18 @@ while True:
             sleep(0.7)
             print("Crie um cadastro:")
             cadastrar_cliente(clientes)
+            gravacao_clientes(clientes)
             sleep(0.7)
         elif escolha == "N":
             print("Crie um cadastro:")
             cadastrar_cliente(clientes)
+            gravacao_clientes(clientes)
             sleep(0.7)
         elif escolha == "S":
             nome = input("Digite seu nome: ")
             senha = input("Digite sua senha: ")
             telefone = input("Digite seu telefone: ")
+            clientes = ler_clientes()
             for c in clientes:
                 if c["nome"] == nome and c["senha"] == senha and c["numero"] == telefone:
                     while True:
@@ -46,7 +50,9 @@ while True:
                         if option == 1:
                             realizar_locacao(locacoes, jogos)
                             sleep(0.7)
+                            gravacao_locacoes(locacoes)
                         elif option == 2:
+                            ler_jogos()
                             listar_jogos(jogos)
                             sleep(0.7)
                         elif option == 3:
@@ -72,13 +78,17 @@ while True:
                 option = int(input("Digite a opção que deseja: "))
                 sleep(0.7)
                 if option == 1:
+                    ler_clientes()
                     listar_clientes(clientes)
                 elif option == 2:
+                    ler_jogos()
                     listar_jogos(jogos)
                 elif option == 3:
+                    ler_locacoes()
                     listar_locacoes(locacoes)
                 elif option == 4:
                     cadastrar_jogo(jogos)
+                    gravacao_jogos(jogos)
                 elif option == 5:
                     break
                 else:

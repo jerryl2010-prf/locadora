@@ -1,5 +1,4 @@
 from time import sleep
-jogos = []
 
 def cadastrar_jogo(jogos):
     sleep(0.5)
@@ -28,5 +27,5 @@ def listar_jogos(jogos):
         sleep(0.5)
         print(f"\nJogo {contador}:")
         sleep(0.5)
-        print(f"Título: {jogo["titulo"]}   |   Plataforma: {jogo["plataforma"]}   |   Gênero: {jogo["genero"]}   |   Valor diário: R${jogo["valor"]}\n\n")
+        print(f"Título: {jogo["nome"]}   |   Plataforma: {jogo["plataforma"]}   |   Gênero: {jogo["genero"]}   |   Valor diário: R${jogo["valor"]}\n\n")
         sleep(3)
