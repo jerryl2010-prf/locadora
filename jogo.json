@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Minecraft",
+        "plataforma": "PC",
+        "genero": "Sandbox",
+        "valor": 10.0
+    },
+    {
+        "nome": "COD MW2",
+        "plataforma": "PC",
+        "genero": "FPS",
+        "valor": 5.0
+    }
+]

@@ -9,15 +9,17 @@ usuario_ger = "gerente"
 senha_ger = "12345"
 
 jogos = []
+jogos = ler_jogos()
 locacoes = []
+locacoes = ler_locacoes()
 clientes = []
+clientes = ler_clientes()
 
 while True:
     print("--- Locadora ---")
     sleep(0.7)
     opcao = int(input("1) Cliente\n2) Gerente\n3) Sair\nDigite sua opção: "))
     if opcao == 1:
-
         escolha = input("Você tem cadastro? (S/N): ")
         if len(clientes) == 0:
             sleep(0.7)
@@ -52,7 +54,7 @@ while True:
                             sleep(0.7)
                             gravacao_locacoes(locacoes)
                         elif option == 2:
-                            ler_jogos()
+                            jogos = ler_jogos()
                             listar_jogos(jogos)
                             sleep(0.7)
                         elif option == 3:
@@ -78,13 +80,13 @@ while True:
                 option = int(input("Digite a opção que deseja: "))
                 sleep(0.7)
                 if option == 1:
-                    ler_clientes()
+                    clientes = ler_clientes()
                     listar_clientes(clientes)
                 elif option == 2:
-                    ler_jogos()
+                    jogos = ler_jogos()
                     listar_jogos(jogos)
                 elif option == 3:
-                    ler_locacoes()
+                    locacoes = ler_locacoes()
                     listar_locacoes(locacoes)
                 elif option == 4:
                     cadastrar_jogo(jogos)

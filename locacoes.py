@@ -53,5 +53,5 @@ def listar_locacoes(locacoes):
         sleep(0.5)
         print(f"\nCliente {contador}:")
         sleep(0.5)
-        print(f"Jogo: {locacao["jogo"]}   |   Dias alocados: {locacao["dias_alocados"]}   |   Valor total: {locacao["valor"]}\n\n")
+        print(f"Jogo: {locacao["jogo"]}   |   Dias alocados: {locacao["dias_alocados"]}   |   Valor total: R${locacao["valor"]}\n\n")
         sleep(3)
